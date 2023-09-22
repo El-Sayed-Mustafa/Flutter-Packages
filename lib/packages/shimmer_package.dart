@@ -44,7 +44,7 @@ class LoadingPost extends StatelessWidget {
         backgroundColor: Colors.white,
       ),
       body: ListView.builder(
-        itemCount: 5, // Change this to the number of loading items you want
+        itemCount: 5,
         itemBuilder: (context, index) {
           return const LoadingItem();
         },
