@@ -5,18 +5,10 @@ class Constants {
   static const double cardMarginHorizontal = 16.0;
   static const double padding = 8.0;
   static const double cornerRadius = 30.0;
-  static const List<BoxShadow> lightShadow = [
-    BoxShadow(
-      color: Colors.grey,
-      offset: Offset(0, 2),
-      blurRadius: 4.0,
-    ),
-  ];
   static const double textUserHeight = 28.0;
   static const double textUserWidth = 300.0;
   static const double textCommentHeight = 20.0;
   static const double textCommentWidth = 240.0;
-  static const double textSmallHeading = 20.0;
   static const double imageHeight = 200.0;
   static const double minRadius = 8.0;
   static const double paddingExLarge = 16.0;
@@ -24,6 +16,13 @@ class Constants {
     color: Colors.black,
     fontSize: 14.0,
   );
+  static const List<BoxShadow> lightShadow = [
+    BoxShadow(
+      color: Colors.grey,
+      offset: Offset(0, 2),
+      blurRadius: 4.0,
+    ),
+  ];
 }
 
 class LoadingPost extends StatelessWidget {
@@ -67,7 +66,8 @@ class LoadingItem extends StatelessWidget {
         baseColor: Colors.grey[300]!,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
+          children: [
+            // User widget
             const SizedBox(
               height: Constants.cardMarginHorizontal,
             ),
@@ -81,6 +81,7 @@ class LoadingItem extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
+            // image widget
             const SizedBox(
               height: Constants.cardMarginHorizontal,
             ),
@@ -94,6 +95,7 @@ class LoadingItem extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
+            // leading post widget
             const SizedBox(height: Constants.padding),
             Container(
               decoration: const BoxDecoration(
